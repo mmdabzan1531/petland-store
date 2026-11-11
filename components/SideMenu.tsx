@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect } from "react";
-import { X, Home, Store, Flame, Tag, LayoutGrid, Info, ShoppingBag, PawPrint, ChevronLeft } from "lucide-react";
+import { X, Home, Store, Flame, Tag, LayoutGrid, Info, Phone, ShoppingBag, PawPrint, ChevronLeft } from "lucide-react";
 
 type Props = { open: boolean; onClose: () => void; onOpenCart?: () => void; cartCount?: number };
 
@@ -12,6 +12,7 @@ const items = [
   { href: "/shop#categories", label: "دسته‌بندی کالاها", icon: LayoutGrid },
   { href: "/shop#all", label: "همه کالاها (پرفروش‌ها اول)", icon: Flame },
   { href: "/#about", label: "درباره پت‌لند", icon: Info },
+  { href: "/#contact", label: "ارتباط با ما", icon: Phone },
 ];
 
 export default function SideMenu({ open, onClose, onOpenCart, cartCount = 0 }: Props) {
@@ -39,7 +40,7 @@ export default function SideMenu({ open, onClose, onOpenCart, cartCount = 0 }: P
               <ShoppingBag size={18} /> <span>سبد خرید</span>{cartCount > 0 && <b className="side-count">{cartCount}</b>}
             </button>
           ) : (
-            <Link href="/shop" onClick={onClose}><ShoppingBag size={18} /> <span>سبد خرید</span><ChevronLeft size={15} className="chev" /></Link>
+            <Link href="/shop#cart" onClick={onClose}><ShoppingBag size={18} /> <span>سبد خرید</span><ChevronLeft size={15} className="chev" /></Link>
           )}
         </nav>
         <div className="side-foot">پت‌لند · فروشگاه آنلاین حیوانات خانگی</div>
