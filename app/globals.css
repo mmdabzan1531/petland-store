@@ -15,3 +15,73 @@
 .feature-grid{grid-template-columns:repeat(4,1fr)}
 @media(max-width:850px){.feature-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-heading h2{font-size:17px}.discount-section{padding:12px;margin-left:-2px;margin-right:-2px}}
+
+/* ===== منوی کشویی از سمت راست (حدود ۱/۴ صفحه) ===== */
+.side-overlay{position:fixed;inset:0;background:#0d1b1266;z-index:80;opacity:0;pointer-events:none;transition:opacity .25s}
+.side-overlay.show{opacity:1;pointer-events:auto}
+.side-menu{position:absolute;top:0;right:0;height:100%;width:max(25vw,300px);max-width:100%;background:#fff;box-shadow:-10px 0 40px #0b1c1030;display:flex;flex-direction:column;padding:18px;transform:translateX(100%);transition:transform .28s ease}
+.side-overlay.show .side-menu{transform:translateX(0)}
+.side-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.side-brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px;color:var(--green)}
+.side-links{display:flex;flex-direction:column;gap:4px;flex:1;overflow:auto}
+.side-links a,.side-links button{display:flex;align-items:center;gap:11px;padding:13px 12px;border-radius:11px;color:var(--ink);text-decoration:none;font-size:13px;background:none;border:0;text-align:right;width:100%}
+.side-links a:hover,.side-links button:hover{background:var(--mint);color:var(--green)}
+.side-links span{flex:1}
+.side-links .chev{opacity:.35}
+.side-count{background:var(--green);color:#fff;border-radius:50%;min-width:21px;height:21px;display:grid;place-items:center;font-size:11px}
+.side-foot{border-top:1px solid var(--line);padding-top:12px;font-size:10px;color:var(--muted);text-align:center}
+
+/* ===== هدر عکس مستطیلی در صفحه فروشگاه ===== */
+.shop-hero{position:relative;height:300px;margin:22px auto 0;max-width:1160px;border-radius:22px;overflow:hidden;width:calc(100% - 44px)}
+.shop-hero>img{width:100%;height:100%;object-fit:cover;display:block}
+.shop-hero-overlay{position:absolute;inset:0;background:linear-gradient(270deg,#143324e6 0%,#14332499 45%,#14332422 100%);color:#fff;padding:26px 34px;display:flex;flex-direction:column;justify-content:center}
+.shop-hero-overlay h1{font-size:34px;margin:8px 0 6px}
+.shop-hero-overlay p{margin:0 0 18px;font-size:13px;color:#e2ece5;max-width:380px;line-height:2}
+.back-home.light{color:#d6e5da;position:absolute;top:18px;right:34px;margin:0}
+.hero-jumps{display:flex;gap:8px;flex-wrap:wrap}
+.hero-jumps a{display:inline-flex;align-items:center;gap:6px;background:#ffffff26;border:1px solid #ffffff40;color:#fff;text-decoration:none;padding:8px 13px;border-radius:30px;font-size:11px;backdrop-filter:blur(4px)}
+.hero-jumps a:hover{background:#fff;color:var(--green)}
+
+/* ===== کاشی‌های دسته‌بندی ===== */
+.cat-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cat-tile{position:relative;height:130px;border-radius:14px;overflow:hidden;border:0;padding:0;text-align:right;transition:.2s}
+.cat-tile:hover{transform:translateY(-3px);box-shadow:0 12px 28px #1a3d2b22}
+.cat-tile img{width:100%;height:100%;object-fit:cover;display:block}
+.cat-tile-shade{position:absolute;inset:0;background:linear-gradient(0deg,#143324dd,#14332422)}
+.cat-tile-text{position:absolute;right:14px;bottom:12px;color:#fff;display:flex;flex-direction:column;gap:3px}
+.cat-tile-text b{font-size:14px}.cat-tile-text small{font-size:10px;color:#d6e5da}
+
+/* ===== پرفروش / تعداد خرید ===== */
+.badge.best-badge{right:auto;left:10px;background:#f5b942;color:#3a2a00;display:flex;align-items:center;gap:3px;font-weight:700}
+.sold{display:inline-block;margin-top:8px;font-size:10px;color:#7b9281;background:#f1f5f1;border-radius:20px;padding:3px 9px}
+.all-section{padding-top:10px;scroll-margin-top:12px}
+#discounts,#categories,#all{scroll-margin-top:12px}
+
+/* ===== بخش‌های «درباره سایت» در صفحه اصلی ===== */
+.about-block{padding:70px max(22px,calc((100% - 1120px)/2))}
+.about-block.alt{background:var(--cream)}
+.about-wrap{max-width:1120px;margin:0 auto}
+.about-title{text-align:center;margin-bottom:34px}
+.about-title .eyebrow{color:#78917e}
+.about-title h2{font-size:26px;color:var(--green);margin:8px 0 0}
+.value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.value-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px}
+.value-icon{width:46px;height:46px;border-radius:14px;background:var(--mint);color:var(--green);display:grid;place-items:center;margin-bottom:14px}
+.value-card h3{font-size:14px;margin:0 0 8px;color:var(--green)}
+.value-card p{font-size:12px;line-height:2;color:var(--muted);margin:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{position:relative;background:var(--mint);border-radius:16px;padding:26px 20px;color:var(--green)}
+.step-num{position:absolute;top:14px;left:16px;font-size:28px;font-weight:800;opacity:.18}
+.step h3{font-size:15px;margin:12px 0 6px}
+.step p{font-size:12px;line-height:2;color:#5c6f62;margin:0}
+
+@media(max-width:850px){.cat-tiles{grid-template-columns:repeat(2,1fr)}.value-grid{grid-template-columns:repeat(2,1fr)}.shop-hero-overlay h1{font-size:28px}}
+@media(max-width:600px){
+ .shop-hero{height:240px;width:calc(100% - 24px);margin-top:14px;border-radius:16px}
+ .shop-hero-overlay{padding:18px}.back-home.light{right:18px;top:14px}
+ .shop-hero-overlay h1{font-size:23px;margin-top:22px}.shop-hero-overlay p{font-size:11px;margin-bottom:12px}
+ .cat-tiles{gap:10px}.cat-tile{height:105px}
+ .value-grid,.steps{grid-template-columns:1fr}
+ .about-block{padding:44px 18px}.about-title h2{font-size:21px}
+ .side-menu{width:82vw}
+}
