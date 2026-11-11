@@ -1,7 +1,7 @@
 "use client";
 import { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, ShoppingBag, PawPrint, Menu, X, Plus, Minus, Trash2, Home, Tag, Flame, LayoutGrid } from "lucide-react";
+import { Search, ShoppingBag, PawPrint, Menu, X, Plus, Minus, Trash2, Home, Tag, Flame, LayoutGrid, Package } from "lucide-react";
 import SideMenu from "../../components/SideMenu";
 import RateSite from "../../components/RateSite";
 import { CAT_IMG } from "../../components/catImage";
@@ -108,6 +108,7 @@ export default function Shop() {
             <a href="#discounts"><Tag size={14} /> تخفیف‌های ویژه</a>
             <a href="#categories"><LayoutGrid size={14} /> دسته‌بندی‌ها</a>
             <a href="#all"><Flame size={14} /> همه کالاها</a>
+            <a href="#everything"><Package size={14} /> کل محصولات</a>
           </div>
         </div>
       </section>
@@ -146,6 +147,12 @@ export default function Shop() {
           <div className="category-row">{categories.map((c) => <button key={c} className={category === c ? "cat active" : "cat"} onClick={() => setCategory(c)}>{c}</button>)}</div>
           <div className="product-grid">{filtered.map(productCard)}</div>
           {filtered.length === 0 && <div className="empty">محصولی با این مشخصات پیدا نشد.</div>}
+        </section>
+
+        {/* کل محصولات — همه با هم، بدون فیلتر */}
+        <section id="everything" className="feature-section everything-section">
+          <div className="section-heading"><div><span className="eyebrow">یک‌جا</span><h2><Package size={21} /> کل محصولات</h2><p>همه‌ی {fa(products.length)} کالا با هم (پرفروش‌ها اول)</p></div></div>
+          <div className="product-grid">{bySales.map(productCard)}</div>
         </section>
       </section>
 
