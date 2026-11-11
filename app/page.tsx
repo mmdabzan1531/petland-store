@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Search, ShoppingBag, PawPrint, Menu, X, Plus, Minus, Trash2, Home, Tag, Flame, LayoutGrid } from "lucide-react";
 import SideMenu from "../../components/SideMenu";
 import RateSite from "../../components/RateSite";
+import { CAT_IMG } from "../../components/catImage";
 import productsData from "../../data/products.json";
 
 type Product = { id: number; name: string; category: string; price: number; oldPrice: number; image: string; description: string; sales: number; discountPercent: number };
@@ -13,7 +14,7 @@ const products = productsData as Product[];
 const ALL = "همه محصولات";
 const categories = [ALL, "غذای خشک", "غذای تر", "اسباب‌بازی", "بهداشت و مراقبت", "لوازم جانبی", "جای خواب و حمل"];
 const realCategories = categories.slice(1);
-const HERO_IMG = "/cat.jpg"; // همان عکس گربه‌ی صفحه اصلی (public/cat.jpg)
+const HERO_IMG = CAT_IMG; // همان عکس گربه‌ی صفحه اصلی
 const BEST_COUNT = 8; // چند کالای اول «پرفروش» نشان بگیرند
 
 const fa = (n: number) => new Intl.NumberFormat("fa-IR").format(n);
