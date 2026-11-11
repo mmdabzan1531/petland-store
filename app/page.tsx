@@ -1,168 +1,186 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { Menu, PawPrint, ShoppingBag, User, Search, ChevronLeft, ArrowLeft, Truck, ShieldCheck, Headphones, Heart, Sparkles, ShoppingCart, PackageCheck } from "lucide-react";
-import SideMenu from "../components/SideMenu";
-import productsData from "../data/products.json";
+import { Search, ShoppingBag, PawPrint, Menu, X, Plus, Minus, Trash2, Home, Tag, Flame, LayoutGrid } from "lucide-react";
+import SideMenu from "../../components/SideMenu";
+import RateSite from "../../components/RateSite";
+import productsData from "../../data/products.json";
 
-const HERO_IMG = "/cat.jpg"; // عکس گربه — فایل public/cat.jpg را با عکس اصلی‌ات عوض کن
-const ABOUT_IMG = "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1000";
-// اطلاعات تماس را اینجا پر کن؛ خالی‌ها نمایش داده نمی‌شوند
-const CONTACT = { phone: "", email: "", instagram: "" };
+type Product = { id: number; name: string; category: string; price: number; oldPrice: number; image: string; description: string; sales: number; discountPercent: number };
+type CartItem = { product: Product; qty: number };
 
-const productCount = productsData.length;
-const categoryCount = new Set((productsData as { category: string }[]).map((p) => p.category)).size;
+const products = productsData as Product[];
+const ALL = "همه محصولات";
+const categories = [ALL, "غذای خشک", "غذای تر", "اسباب‌بازی", "بهداشت و مراقبت", "لوازم جانبی", "جای خواب و حمل"];
+const realCategories = categories.slice(1);
+const HERO_IMG = "/cat.jpg"; // همان عکس گربه‌ی صفحه اصلی (public/cat.jpg)
+const BEST_COUNT = 8; // چند کالای اول «پرفروش» نشان بگیرند
+
 const fa = (n: number) => new Intl.NumberFormat("fa-IR").format(n);
+const money = (n: number) => fa(n) + " تومان";
 
-const trust = [
-  { icon: Truck, title: "ارسال سریع", text: "بسته‌بندی ایمن و ارسال به‌موقع" },
-  { icon: ShieldCheck, title: "ضمانت کیفیت", text: "کالاهای انتخاب‌شده و مطمئن" },
-  { icon: Headphones, title: "پشتیبانی دوستانه", text: "کنار تو برای هر سؤال" },
-];
-const values = [
-  { icon: Heart, title: "با عشق انتخاب شده", text: "هر کالا با توجه به نیاز واقعی حیوان خانگی و کیفیت ساخت انتخاب می‌شود." },
-  { icon: Truck, title: "ارسال سریع", text: "سفارش‌ها با بسته‌بندی ایمن و در کوتاه‌ترین زمان آماده ارسال می‌شوند." },
-  { icon: ShieldCheck, title: "خرید مطمئن", text: "کیفیت کالاها قبل از عرضه بررسی می‌شود تا با خیال راحت خرید کنی." },
-  { icon: Sparkles, title: "تخفیف‌های ویژه", text: "همیشه بخشی از کالاها با قیمت ویژه عرضه می‌شود." },
-];
-const steps = [
-  { icon: Search, title: "انتخاب", text: "در فروشگاه بین دسته‌بندی‌ها بگرد یا جستجو کن." },
-  { icon: ShoppingCart, title: "افزودن به سبد", text: "کالاهای مورد نظرت را به سبد خرید اضافه کن." },
-  { icon: PackageCheck, title: "دریافت", text: "سفارشت را ثبت کن و منتظر رسیدن بسته باش." },
-];
+// مرتب‌سازی بر اساس بیشترین خرید
+const bySales = [...products].sort((a, b) => b.sales - a.sales);
+const bestIds = new Set(bySales.slice(0, BEST_COUNT).map((p) => p.id));
 
-export default function Home() {
-  const router = useRouter();
+export default function Shop() {
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState(ALL);
+  const [discCat, setDiscCat] = useState(ALL);
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartOpen, setCartOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [q, setQ] = useState("");
-  const [cartCount, setCartCount] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem("petland-cart");
-      if (saved) setCartCount((JSON.parse(saved) as { qty: number }[]).reduce((s, x) => s + x.qty, 0));
-    } catch {}
+    try { const saved = localStorage.getItem("petland-cart"); if (saved) setCart(JSON.parse(saved)); } catch {}
+    setLoaded(true);
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q) { setQuery(q); setTimeout(() => document.getElementById("all")?.scrollIntoView({ behavior: "smooth" }), 150); }
+    if (window.location.hash === "#cart") setCartOpen(true);
   }, []);
+  useEffect(() => { if (loaded) { try { localStorage.setItem("petland-cart", JSON.stringify(cart)); } catch {} } }, [cart, loaded]);
 
-  function submit(e: React.FormEvent) {
-    e.preventDefault();
-    const t = q.trim();
-    router.push(t ? `/shop?q=${encodeURIComponent(t)}` : "/shop");
+  // همه کالاها: پرفروش‌ترین اول
+  const filtered = useMemo(
+    () => bySales.filter((p) => (category === ALL || p.category === category) && p.name.includes(query.trim())),
+    [category, query]
+  );
+
+  // تخفیف‌ها دسته‌بندی‌شده
+  const allDiscounts = useMemo(() => products.filter((p) => p.discountPercent > 0).sort((a, b) => b.discountPercent - a.discountPercent), []);
+  const discCats = realCategories.filter((c) => allDiscounts.some((p) => p.category === c));
+  const discounts = discCat === ALL ? allDiscounts : allDiscounts.filter((p) => p.category === discCat);
+
+  const catTiles = useMemo(
+    () => realCategories.map((c) => {
+      const list = bySales.filter((p) => p.category === c);
+      return { name: c, count: list.length, image: list[0]?.image, discounts: list.filter((p) => p.discountPercent > 0).length };
+    }),
+    []
+  );
+
+  const count = cart.reduce((s, x) => s + x.qty, 0);
+  const total = cart.reduce((s, x) => s + x.qty * x.product.price, 0);
+  function add(p: Product) { setCart((old) => { const f = old.find((x) => x.product.id === p.id); return f ? old.map((x) => (x.product.id === p.id ? { ...x, qty: x.qty + 1 } : x)) : [...old, { product: p, qty: 1 }]; }); }
+  function change(id: number, d: number) { setCart((old) => old.map((x) => (x.product.id === id ? { ...x, qty: x.qty + d } : x)).filter((x) => x.qty > 0)); }
+  function pickCategory(c: string) { setCategory(c); setQuery(""); document.getElementById("all")?.scrollIntoView({ behavior: "smooth" }); }
+
+  function productCard(p: Product) {
+    return (
+      <article className="product-card" key={p.id}>
+        <div className="product-image">
+          <img src={p.image} alt={p.name} />
+          {p.discountPercent > 0 && <span className="badge discount-badge">{fa(p.discountPercent)}٪ تخفیف</span>}
+          {bestIds.has(p.id) && <span className="badge best-badge"><Flame size={11} /> پرفروش</span>}
+        </div>
+        <div className="product-info">
+          <span className="product-category">{p.category}</span>
+          <h3>{p.name}</h3>
+          <p>{p.description}</p>
+          <span className="sold">{fa(p.sales)} خرید</span>
+          <div className="prices">{p.discountPercent > 0 && <del>{money(p.oldPrice)}</del>}<strong>{money(p.price)}</strong></div>
+          <button className="add-btn" onClick={() => add(p)}><Plus size={17} /> افزودن به سبد</button>
+        </div>
+      </article>
+    );
   }
 
-  const hasContact = CONTACT.phone || CONTACT.email || CONTACT.instagram;
-
   return (
-    <main className="lp-home">
-      <SideMenu open={menuOpen} onClose={() => setMenuOpen(false)} cartCount={cartCount} />
+    <main className="shop-page">
+      <SideMenu open={menuOpen} onClose={() => setMenuOpen(false)} onOpenCart={() => setCartOpen(true)} cartCount={count} />
 
-      <header className="lp-header">
-        <div className="lp-top">
-          <button className="lp-menu" onClick={() => setMenuOpen(true)} aria-label="باز کردن منو"><Menu size={22} /></button>
-          <Link className="lp-brand" href="/">
-            <span className="lp-brand-icon"><PawPrint size={22} /></span>
-            <span><b>پت‌لند</b><small>دنیای دوست‌داشتنی‌ها</small></span>
-          </Link>
-          <form className="lp-search" onSubmit={submit}>
-            <Search size={20} />
-            <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="جستجو بین محصولات..." />
-          </form>
-          <div className="lp-actions">
-            <button className="lp-icon-btn" aria-label="حساب کاربری"><User size={20} /></button>
-            <Link className="lp-cart" href="/shop#cart" aria-label="سبد خرید"><ShoppingBag size={18} /><b>{fa(cartCount)}</b></Link>
-          </div>
-        </div>
-        <nav className="lp-nav">
-          <div className="lp-nav-in">
-            <Link href="/shop">محصولات</Link>
-            <a href="#about">درباره ما</a>
-            <a href="#contact">ارتباط با ما</a>
-          </div>
-        </nav>
+      <header className="site-header shop-header">
+        <button className="menu-button" onClick={() => setMenuOpen(true)} aria-label="باز کردن منو"><Menu /></button>
+        <Link className="brand" href="/"><span className="brand-icon"><PawPrint /></span><span>پت‌لند<small>دنیای دوست‌داشتنی‌ها</small></span></Link>
+        <button className="cart-header" onClick={() => setCartOpen(true)}><ShoppingBag size={18} /> سبد خرید <b>{fa(count)}</b></button>
       </header>
 
-      {/* بالای صفحه: کارت عکس مستطیلی (ثابت) */}
-      <section className="lp-hero">
-        <div className="lp-card">
-          <div className="lp-card-img">
-            <img src={HERO_IMG} alt="گربه" />
-            <span className="lp-caption"><PawPrint size={18} /> دوست خوب، زندگی قشنگ</span>
+      {/* عکس مستطیلی گربه */}
+      <section className="shop-hero">
+        <img src={HERO_IMG} alt="گربه" />
+        <div className="shop-hero-overlay">
+          <Link href="/" className="back-home light"><Home size={15} /> صفحه اصلی</Link>
+          <h1>فروشگاه پت‌لند</h1>
+          <p>همه کالاها دسته‌بندی شده؛ تخفیف‌ها و پرفروش‌ها را اول ببین.</p>
+          <div className="hero-jumps">
+            <a href="#discounts"><Tag size={14} /> تخفیف‌های ویژه</a>
+            <a href="#categories"><LayoutGrid size={14} /> دسته‌بندی‌ها</a>
+            <a href="#all"><Flame size={14} /> همه کالاها</a>
           </div>
-          <div className="lp-card-body">
-            <span className="lp-kicker">برای دوست‌های پشمالوی شما</span>
-            <h1>مراقبت از آن‌ها<br />با عشق شروع می‌شود</h1>
-            <p>غذای خشک، تشویقی و لوازم موردنیاز حیوانات خانگی؛ با انتخابی مطمئن و قیمتی دوست‌داشتنی.</p>
-            <Link className="lp-cta" href="/shop">خرید محصولات <ChevronLeft size={18} /></Link>
-          </div>
         </div>
       </section>
 
-      <section className="lp-trust">
-        <div className="lp-trust-in">
-          {trust.map(({ icon: Icon, title, text }) => (
-            <div className="lp-trust-item" key={title}><Icon size={24} /><b>{title}</b><small>{text}</small></div>
-          ))}
-        </div>
-      </section>
-
-      {/* پایین‌تر: فقط درباره سایت */}
-      <section className="about-home" id="about">
-        <div className="about-image"><img src={ABOUT_IMG} alt="درباره پت‌لند" /></div>
-        <div className="about-text">
-          <span className="eyebrow">درباره ما</span>
-          <h2>پت‌لند؛ خونه‌ی همه چیزهایی که حیوان خانگی‌ات دوست داره</h2>
-          <p>پت‌لند یک فروشگاه آنلاین برای صاحبان حیوانات خانگی است. هدف ما ساده است: پیدا کردن بهترین کالا برای دوست چهارپات، بدون این‌که لازم باشد بین ده‌ها فروشگاه بگردی.</p>
-          <p>در حال حاضر {fa(productCount)} محصول در {fa(categoryCount)} دسته‌بندی در فروشگاه موجود است و پرفروش‌ترین کالاها و تخفیف‌های ویژه همیشه در دسترس هستند.</p>
-          <p className="demo-label">قیمت‌ها و تعداد فروش در این نسخه نمایشی و فرضی هستند.</p>
-          <Link className="text-link" href="/shop">رفتن به فروشگاه <ArrowLeft size={14} /></Link>
-        </div>
-      </section>
-
-      <section className="about-block alt">
-        <div className="about-wrap">
-          <div className="about-title"><span className="eyebrow">چرا پت‌لند؟</span><h2>ارزش‌هایی که برایمان مهم است</h2></div>
-          <div className="value-grid">
-            {values.map(({ icon: Icon, title, text }) => (
-              <div className="value-card" key={title}><span className="value-icon"><Icon size={22} /></span><h3>{title}</h3><p>{text}</p></div>
+      <section className="shop-content">
+        {/* تخفیف‌های ویژه — دسته‌بندی‌شده */}
+        <section className="feature-section discount-section" id="discounts">
+          <div className="section-heading"><div><span className="eyebrow">فرصت‌های محدود</span><h2><Tag size={21} /> تخفیف‌های ویژه</h2><p>بر اساس دسته‌بندی ببین</p></div></div>
+          <div className="category-row">
+            <button className={discCat === ALL ? "cat active" : "cat"} onClick={() => setDiscCat(ALL)}>همه تخفیف‌ها ({fa(allDiscounts.length)})</button>
+            {discCats.map((c) => (
+              <button key={c} className={discCat === c ? "cat active" : "cat"} onClick={() => setDiscCat(c)}>{c} ({fa(allDiscounts.filter((p) => p.category === c).length)})</button>
             ))}
           </div>
-        </div>
-      </section>
+          <div className="product-grid feature-grid">{discounts.map(productCard)}</div>
+        </section>
 
-      <section className="about-block">
-        <div className="about-wrap">
-          <div className="about-title"><span className="eyebrow">روش کار</span><h2>خرید از پت‌لند چطوریه؟</h2></div>
-          <div className="steps">
-            {steps.map(({ icon: Icon, title, text }, i) => (
-              <div className="step" key={title}><span className="step-num">{fa(i + 1)}</span><Icon size={24} /><h3>{title}</h3><p>{text}</p></div>
+        {/* دسته‌بندی کل کالاها */}
+        <section className="feature-section" id="categories">
+          <div className="section-heading"><div><span className="eyebrow">دسته‌بندی</span><h2><LayoutGrid size={21} /> دسته‌بندی کالاها</h2><p>یک دسته را انتخاب کن تا کالاهایش را ببینی</p></div></div>
+          <div className="cat-tiles">
+            {catTiles.map((t) => (
+              <button className="cat-tile" key={t.name} onClick={() => pickCategory(t.name)}>
+                <img src={t.image} alt="" />
+                <span className="cat-tile-shade" />
+                <span className="cat-tile-text"><b>{t.name}</b><small>{fa(t.count)} کالا{t.discounts > 0 && ` · ${fa(t.discounts)} تخفیف‌دار`}</small></span>
+              </button>
             ))}
           </div>
-        </div>
+        </section>
+
+        {/* همه کالاها — پرفروش‌ها اول */}
+        <section id="all" className="all-section">
+          <div className="section-heading"><div><span className="eyebrow">پرفروش‌ها اول</span><h2><Flame size={21} /> همه کالاها</h2><p>مرتب‌شده بر اساس بیشترین خرید</p></div></div>
+          <div className="shop-tools"><div className="shop-search"><Search size={19} /><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="نام محصول را جستجو کن..." />{query && <button onClick={() => setQuery("")}><X size={16} /></button>}</div><span>{fa(filtered.length)} محصول</span></div>
+          <div className="category-row">{categories.map((c) => <button key={c} className={category === c ? "cat active" : "cat"} onClick={() => setCategory(c)}>{c}</button>)}</div>
+          <div className="product-grid">{filtered.map(productCard)}</div>
+          {filtered.length === 0 && <div className="empty">محصولی با این مشخصات پیدا نشد.</div>}
+        </section>
       </section>
 
-      <section className="about-block alt" id="contact">
-        <div className="about-wrap">
-          <div className="about-title"><span className="eyebrow">ارتباط با ما</span><h2>هر سؤالی داشتی، بپرس</h2></div>
-          <div className="contact-box">
-            {hasContact ? (
-              <>
-                {CONTACT.phone && <div>تلفن: <a href={`tel:${CONTACT.phone}`}>{CONTACT.phone}</a></div>}
-                {CONTACT.email && <div>ایمیل: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></div>}
-                {CONTACT.instagram && <div>اینستاگرام: <a href={`https://instagram.com/${CONTACT.instagram}`}>{CONTACT.instagram}</a></div>}
-              </>
+      {cartOpen && (
+        <div className="overlay" onClick={() => setCartOpen(false)}>
+          <aside className="drawer" onClick={(e) => e.stopPropagation()}>
+            <div className="drawer-head"><h2>سبد خرید ({fa(count)})</h2><button className="icon-btn" onClick={() => setCartOpen(false)}><X /></button></div>
+            {cart.length === 0 ? (
+              <div className="empty-cart"><ShoppingBag size={40} /><b>سبدت هنوز خالیه</b><p>محصولی به سبد خرید اضافه کن.</p></div>
             ) : (
-              <div>راه‌های ارتباطی به‌زودی اضافه می‌شود.</div>
+              <>
+                <div className="cart-list">
+                  {cart.map((item) => (
+                    <div className="cart-item" key={item.product.id}>
+                      <img src={item.product.image} alt="" />
+                      <div className="cart-detail"><b>{item.product.name}</b><strong>{money(item.product.price)}</strong>
+                        <div className="qty"><button onClick={() => change(item.product.id, -1)}><Minus size={14} /></button><span>{fa(item.qty)}</span><button onClick={() => change(item.product.id, 1)}><Plus size={14} /></button></div>
+                      </div>
+                      <button className="remove" onClick={() => setCart((old) => old.filter((x) => x.product.id !== item.product.id))}><Trash2 size={17} /></button>
+                    </div>
+                  ))}
+                </div>
+                <div className="cart-total">
+                  <div><span>جمع کل</span><b>{money(total)}</b></div>
+                  <button className="primary full" onClick={() => alert("این نسخه نمایشی است و درگاه پرداخت هنوز متصل نشده است.")}>ادامه و پرداخت</button>
+                  <small>پرداخت در نسخه نمایشی فعال نیست.</small>
+                </div>
+              </>
             )}
-          </div>
+          </aside>
         </div>
-      </section>
+      )}
 
-      <footer className="site-footer">
-        <span className="footer-brand"><PawPrint size={18} /> پت‌لند</span>
-        <Link href="/shop">رفتن به فروشگاه</Link>
-        <small>© ۱۴۰۵ پت‌لند · نسخه نمایشی</small>
-      </footer>
+      <RateSite />
+
+      <footer className="shop-footer"><Link href="/">بازگشت به صفحه اصلی</Link><span>© ۱۴۰۵ پت‌لند</span></footer>
     </main>
   );
 }
