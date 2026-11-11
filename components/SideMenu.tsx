@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect } from "react";
-import { X, Home, Store, Flame, Tag, LayoutGrid, Info, Phone, ShoppingBag, PawPrint, ChevronLeft } from "lucide-react";
+import { X, Home, Store, Flame, Tag, LayoutGrid, Package, Info, Phone, ShoppingBag, PawPrint, ChevronLeft } from "lucide-react";
 
 type Props = { open: boolean; onClose: () => void; onOpenCart?: () => void; cartCount?: number };
 
@@ -11,6 +11,7 @@ const items = [
   { href: "/shop#discounts", label: "تخفیف‌های ویژه", icon: Tag },
   { href: "/shop#categories", label: "دسته‌بندی کالاها", icon: LayoutGrid },
   { href: "/shop#all", label: "همه کالاها (پرفروش‌ها اول)", icon: Flame },
+  { href: "/shop#everything", label: "کل محصولات (همه با هم)", icon: Package },
   { href: "/#about", label: "درباره پت‌لند", icon: Info },
   { href: "/#contact", label: "ارتباط با ما", icon: Phone },
 ];
