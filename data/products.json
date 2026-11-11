@@ -4,300 +4,330 @@
     "name": "غذای خشک گربه بالغ",
     "category": "غذای خشک",
     "price": 180000,
-    "oldPrice": 230000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 180000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 122,
+    "discountPercent": 0
   },
   {
     "id": 2,
     "name": "غذای خشک سگ نژاد کوچک",
     "category": "غذای خشک",
     "price": 215000,
-    "oldPrice": 265000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 269000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 159,
+    "discountPercent": 20
   },
   {
     "id": 3,
     "name": "غذای خشک بچه گربه",
     "category": "غذای خشک",
     "price": 250000,
-    "oldPrice": 300000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 250000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 196,
+    "discountPercent": 0
   },
   {
     "id": 4,
     "name": "غذای خشک سگ نژاد بزرگ",
     "category": "غذای خشک",
     "price": 285000,
-    "oldPrice": 335000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 285000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 233,
+    "discountPercent": 0
   },
   {
     "id": 5,
     "name": "غذای خشک گربه عقیم‌شده",
     "category": "غذای خشک",
     "price": 180000,
-    "oldPrice": 230000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 212000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 270,
+    "discountPercent": 15
   },
   {
     "id": 6,
     "name": "غذای خشک توله سگ",
     "category": "غذای خشک",
     "price": 215000,
-    "oldPrice": 265000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 215000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 307,
+    "discountPercent": 0
   },
   {
     "id": 7,
     "name": "غذای خشک گربه حساس",
     "category": "غذای خشک",
     "price": 250000,
-    "oldPrice": 300000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "پرفروش"
+    "oldPrice": 250000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 344,
+    "discountPercent": 0
   },
   {
     "id": 8,
     "name": "غذای خشک سگ بالغ",
     "category": "غذای خشک",
     "price": 285000,
-    "oldPrice": 335000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 380000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 381,
+    "discountPercent": 25
   },
   {
     "id": 9,
     "name": "غذای خشک گربه پرشین",
     "category": "غذای خشک",
     "price": 180000,
-    "oldPrice": 230000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 180000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 418,
+    "discountPercent": 0
   },
   {
     "id": 10,
     "name": "غذای خشک سگ نژاد متوسط",
     "category": "غذای خشک",
     "price": 215000,
-    "oldPrice": 265000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 215000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 455,
+    "discountPercent": 0
   },
   {
     "id": 11,
     "name": "غذای خشک گربه خانگی",
     "category": "غذای خشک",
     "price": 250000,
-    "oldPrice": 300000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 250000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 492,
+    "discountPercent": 0
   },
   {
     "id": 12,
     "name": "غذای خشک توله سگ کوچک",
     "category": "غذای خشک",
     "price": 285000,
-    "oldPrice": 335000,
-    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 285000,
+    "image": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 109,
+    "discountPercent": 0
   },
   {
     "id": 13,
     "name": "پوچ گربه مرغ",
     "category": "غذای تر",
     "price": 95000,
-    "oldPrice": 145000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 116000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 146,
+    "discountPercent": 18
   },
   {
     "id": 14,
     "name": "کنسرو سگ گوشت",
     "category": "غذای تر",
     "price": 130000,
-    "oldPrice": 180000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "پرفروش"
+    "oldPrice": 130000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 183,
+    "discountPercent": 0
   },
   {
     "id": 15,
     "name": "پوچ گربه ماهی",
     "category": "غذای تر",
     "price": 165000,
-    "oldPrice": 215000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 165000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 220,
+    "discountPercent": 0
   },
   {
     "id": 16,
     "name": "کنسرو گربه مرغ و سبزیجات",
     "category": "غذای تر",
     "price": 200000,
-    "oldPrice": 250000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 200000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 257,
+    "discountPercent": 0
   },
   {
     "id": 17,
     "name": "پوچ بچه گربه",
     "category": "غذای تر",
     "price": 95000,
-    "oldPrice": 145000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 136000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 294,
+    "discountPercent": 30
   },
   {
     "id": 18,
     "name": "کنسرو سگ مرغ",
     "category": "غذای تر",
     "price": 130000,
-    "oldPrice": 180000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 130000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 331,
+    "discountPercent": 0
   },
   {
     "id": 19,
     "name": "پوچ گربه بوقلمون",
     "category": "غذای تر",
     "price": 165000,
-    "oldPrice": 215000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 165000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 368,
+    "discountPercent": 0
   },
   {
     "id": 20,
     "name": "کنسرو گربه سالمون",
     "category": "غذای تر",
     "price": 200000,
-    "oldPrice": 250000,
-    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 200000,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 405,
+    "discountPercent": 0
   },
   {
     "id": 21,
     "name": "توپ بازی گربه",
     "category": "اسباب‌بازی",
     "price": 120000,
-    "oldPrice": 170000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "پرفروش"
+    "oldPrice": 120000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 442,
+    "discountPercent": 0
   },
   {
     "id": 22,
     "name": "موش پارچه‌ای گربه",
     "category": "اسباب‌بازی",
     "price": 155000,
-    "oldPrice": 205000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 182000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 479,
+    "discountPercent": 15
   },
   {
     "id": 23,
     "name": "اسباب‌بازی طنابی سگ",
     "category": "اسباب‌بازی",
     "price": 190000,
-    "oldPrice": 240000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 190000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 96,
+    "discountPercent": 0
   },
   {
     "id": 24,
     "name": "توپ صدادار سگ",
     "category": "اسباب‌بازی",
     "price": 225000,
-    "oldPrice": 275000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 225000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 133,
+    "discountPercent": 0
   },
   {
     "id": 25,
     "name": "چوب بازی پر گربه",
     "category": "اسباب‌بازی",
     "price": 120000,
-    "oldPrice": 170000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 120000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 170,
+    "discountPercent": 0
   },
   {
     "id": 26,
     "name": "تونل بازی گربه",
     "category": "اسباب‌بازی",
     "price": 155000,
-    "oldPrice": 205000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 155000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 207,
+    "discountPercent": 0
   },
   {
     "id": 27,
     "name": "فرزبی سگ",
     "category": "اسباب‌بازی",
     "price": 190000,
-    "oldPrice": 240000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 238000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 244,
+    "discountPercent": 20
   },
   {
     "id": 28,
     "name": "اسباب‌بازی دندانی سگ",
     "category": "اسباب‌بازی",
     "price": 225000,
-    "oldPrice": 275000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "پرفروش"
+    "oldPrice": 225000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 281,
+    "discountPercent": 0
   },
   {
     "id": 29,
     "name": "فنر بازی گربه",
     "category": "اسباب‌بازی",
     "price": 120000,
-    "oldPrice": 170000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 120000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 318,
+    "discountPercent": 0
   },
   {
     "id": 30,
     "name": "عروسک پولیشی حیوانات",
     "category": "اسباب‌بازی",
     "price": 155000,
-    "oldPrice": 205000,
-    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 155000,
+    "image": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 355,
+    "discountPercent": 0
   },
   {
     "id": 31,
@@ -305,198 +335,218 @@
     "category": "بهداشت و مراقبت",
     "price": 150000,
     "oldPrice": 200000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 392,
+    "discountPercent": 25
   },
   {
     "id": 32,
     "name": "شامپو مخصوص گربه",
     "category": "بهداشت و مراقبت",
     "price": 185000,
-    "oldPrice": 235000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 185000,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 429,
+    "discountPercent": 0
   },
   {
     "id": 33,
     "name": "برس نرم‌کننده مو",
     "category": "بهداشت و مراقبت",
     "price": 220000,
-    "oldPrice": 270000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 220000,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 466,
+    "discountPercent": 0
   },
   {
     "id": 34,
     "name": "ناخن‌گیر حیوانات",
     "category": "بهداشت و مراقبت",
     "price": 255000,
-    "oldPrice": 305000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 255000,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 503,
+    "discountPercent": 0
   },
   {
     "id": 35,
     "name": "خمیر دندان سگ و گربه",
     "category": "بهداشت و مراقبت",
     "price": 150000,
-    "oldPrice": 200000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "پرفروش"
+    "oldPrice": 150000,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 120,
+    "discountPercent": 0
   },
   {
     "id": 36,
     "name": "اسپری خوشبوکننده",
     "category": "بهداشت و مراقبت",
     "price": 185000,
-    "oldPrice": 235000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 206000,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 157,
+    "discountPercent": 10
   },
   {
     "id": 37,
     "name": "شانه ضدگره",
     "category": "بهداشت و مراقبت",
     "price": 220000,
-    "oldPrice": 270000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 220000,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 194,
+    "discountPercent": 0
   },
   {
     "id": 38,
     "name": "دستمال مرطوب حیوانات",
     "category": "بهداشت و مراقبت",
     "price": 255000,
-    "oldPrice": 305000,
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 255000,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 231,
+    "discountPercent": 0
   },
   {
     "id": 39,
     "name": "قلاده گردنی",
     "category": "لوازم جانبی",
     "price": 220000,
-    "oldPrice": 270000,
-    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 220000,
+    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 268,
+    "discountPercent": 0
   },
   {
     "id": 40,
     "name": "بند قلاده",
     "category": "لوازم جانبی",
     "price": 255000,
-    "oldPrice": 305000,
-    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 255000,
+    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 305,
+    "discountPercent": 0
   },
   {
     "id": 41,
     "name": "ظرف غذای استیل",
     "category": "لوازم جانبی",
     "price": 290000,
-    "oldPrice": 340000,
-    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 290000,
+    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 342,
+    "discountPercent": 0
   },
   {
     "id": 42,
     "name": "ظرف آب مسافرتی",
     "category": "لوازم جانبی",
     "price": 325000,
-    "oldPrice": 375000,
-    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "پرفروش"
+    "oldPrice": 406000,
+    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 379,
+    "discountPercent": 20
   },
   {
     "id": 43,
     "name": "پلاک اسم حیوان",
     "category": "لوازم جانبی",
     "price": 220000,
-    "oldPrice": 270000,
-    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 220000,
+    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 416,
+    "discountPercent": 0
   },
   {
     "id": 44,
     "name": "ظرف غذای دوقلو",
     "category": "لوازم جانبی",
     "price": 255000,
-    "oldPrice": 305000,
-    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 255000,
+    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 453,
+    "discountPercent": 0
   },
   {
     "id": 45,
     "name": "اسکوپ خاک گربه",
     "category": "لوازم جانبی",
     "price": 290000,
-    "oldPrice": 340000,
-    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 290000,
+    "image": "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 490,
+    "discountPercent": 0
   },
   {
     "id": 46,
     "name": "جای خواب گرد گربه",
     "category": "جای خواب و حمل",
     "price": 390000,
-    "oldPrice": 440000,
-    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 390000,
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 107,
+    "discountPercent": 0
   },
   {
     "id": 47,
     "name": "تشک نرم سگ",
     "category": "جای خواب و حمل",
     "price": 425000,
-    "oldPrice": 475000,
-    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 500000,
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 144,
+    "discountPercent": 15
   },
   {
     "id": 48,
     "name": "باکس حمل گربه",
     "category": "جای خواب و حمل",
     "price": 460000,
-    "oldPrice": 510000,
-    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": ""
+    "oldPrice": 460000,
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 181,
+    "discountPercent": 0
   },
   {
     "id": 49,
     "name": "کیف حمل حیوانات",
     "category": "جای خواب و حمل",
     "price": 495000,
-    "oldPrice": 545000,
-    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "پرفروش"
+    "oldPrice": 495000,
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 218,
+    "discountPercent": 0
   },
   {
     "id": 50,
     "name": "خانه پارچه‌ای حیوانات",
     "category": "جای خواب و حمل",
     "price": 390000,
-    "oldPrice": 440000,
-    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600",
-    "description": "محصولی باکیفیت و کاربردی برای سلامت و شادی حیوان خانگی شما.",
-    "badge": "جدید"
+    "oldPrice": 557000,
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700",
+    "description": "محصولی کاربردی برای سلامت و شادی حیوان خانگی شما.",
+    "sales": 255,
+    "discountPercent": 30
   }
 ]
