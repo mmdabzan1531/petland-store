@@ -133,3 +133,17 @@
  .lp-card-body h1{font-size:40px}
 }
 @media(max-width:600px){.lp-top{padding:14px 14px}.lp-hero,.lp-trust{padding:0 14px}.lp-nav-in{padding:0 14px}.lp-trust-item small{display:none}}
+
+/* ===== امتیازدهی به سایت ===== */
+.rate-section{padding:50px 22px;background:var(--cream);border-top:1px solid var(--line)}
+.rate-box{max-width:460px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px 22px}
+.rate-box h2{margin:0 0 8px;font-size:20px;color:var(--green)}
+.rate-box p{margin:0 0 18px;font-size:12px;color:var(--muted);line-height:2}
+.stars{display:flex;justify-content:center;gap:6px}
+.star{background:none;border:0;padding:2px;color:#cfd6d0;transition:transform .15s}
+.star.on{color:#f5b942}.star:hover{transform:scale(1.15)}
+.rate-label{height:24px;margin:8px 0 6px;font-size:13px;font-weight:700;color:var(--green)}
+.rate-box textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;font-size:12px;resize:none;outline:0;background:#fafbfa;margin-bottom:10px}
+.rate-btn{width:100%}
+.rate-thanks{background:var(--mint);color:var(--green);border-radius:12px;padding:12px;font-size:13px;font-weight:700}
+.rate-box small{display:block;margin-top:14px;font-size:10px;color:#9aa39c}
